@@ -1,0 +1,43 @@
+.material-icons {
+  font-family: 'Roboto', sans-serif;
+  font-size: 60px; 
+}
+
+.exchange {
+  margin: 0 auto;
+  display: flex;
+  flex-flow: column nowrap;
+  width:60%;
+  border: 1px solid black;
+} 
+
+.title {
+font-size: 36px;
+}
+
+.containerMain {
+  display:flex;
+  flex-flow: row nowrap;
+  justify-content:space-between;
+}
+
+.display {
+  border:1px solid grey;
+  border-radius:6px;
+  height: 100px;
+  width:260px;
+}
+
+.reverse {
+  border:1px solid grey;
+  width: 100%;
+}
+
+input[type='number'] {
+  border:none;
+  border-radius: 20px;
+  height: 50px;
+  padding:10px;
+  width: 90%;
+  font-size:36px;
+}
