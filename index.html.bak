@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Some Title for M4_1 project</title>
+    <link rel="stylesheet" href="style.css" media="all">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section class="exchange">
+        <h1 class="title">Currency converter online</h1>
+        <div class="containerMain">
+          <div class="left">
+            <input class="left leftButton L" type="button" value="RUB">
+            <input class="left leftButton M" type="button" value="USD">
+            <input class="left leftButton M" type="button" value="EUR">
+            <input class="left leftButton R" type="button" value="GBP">
+            <select class="left leftSelect" name="rightSelect"  value="1">
+              <option value="USD">USD</option>
+              <option value="EUR">EUR</option>
+              <option value="CHF">CHF</option>
+              <option value="NOK">NOK</option>
+              <option value="CAD">CAD</option>
+              <option value="RUB">RUB</option>
+              <option value="GBP">GBP</option>
+              <option value="MXN">MXN</option>
+              <option value="CNY">CNY</option>
+              <option value="ISK">ISK</option>
+              <option value="KRW">KRW</option>
+              <option value="HKD">HKD</option>
+              <option value="CZK">CZK</option>
+              <option value="BGN">BGN</option>
+              <option value="BRL">BRL</option>
+              <option value="IDR">IDR</option>
+              <option value="SGD">SGD</option>
+              <option value="PHP">PHP</option>
+              <option value="RON">RON</option>
+              <option value="HUF">HUF</option>
+              <option value="ILS">ILS</option>
+              <option value="THB">THB</option>
+              <option value="SEK">SEK</option>
+              <option value="NZD">NZD</option>
+              <option value="AUD">AUD</option>
+              <option value="DKK">DKK</option>
+              <option value="HRK">HRK</option>
+              <option value="PLN">PLN</option>
+              <option value="TRY">TRY</option>
+              <option value="INR">INR</option>
+              <option value="MYR">MYR</option>
+              <option value="ZAR">ZAR</option>
+              <option value="JPY">JPY</option>
+            </select>        
+            <div class="display">
+              <input class="left cur" type="number" name="">
+              <p class="detailsL"></p>
+            </div>
+          </div>
+          <div class="reverse">
+            <span class="material-icons"> compare_arrows </span>
+          </div>
+          <div class="right">
+            <input class="right rightButton L"  type="button" value="RUB">
+            <input class="right rightButton M"   type="button" value="USD">
+            <input class="right rightButton M"   type="button" value="EUR">
+            <input class="right rightButton R" type="button" value="GBP">
+            <select class="right rightSelect" name="leftSelect" value="1">
+              <option value="EUR">EUR</option>
+              <option value="CHF">CHF</option>
+              <option value="NOK">NOK</option>
+              <option value="CAD">CAD</option>
+              <option value="RUB">RUB</option>
+              <option value="GBP">GBP</option>
+              <option value="MXN">MXN</option>
+              <option value="CNY">CNY</option>
+              <option value="ISK">ISK</option>
+              <option value="KRW">KRW</option>
+              <option value="HKD">HKD</option>
+              <option value="CZK">CZK</option>
+              <option value="BGN">BGN</option>
+              <option value="BRL">BRL</option>
+              <option value="USD">USD</option>
+              <option value="IDR">IDR</option>
+              <option value="SGD">SGD</option>
+              <option value="PHP">PHP</option>
+              <option value="RON">RON</option>
+              <option value="HUF">HUF</option>
+              <option value="ILS">ILS</option>
+              <option value="THB">THB</option>
+              <option value="SEK">SEK</option>
+              <option value="NZD">NZD</option>
+              <option value="AUD">AUD</option>
+              <option value="DKK">DKK</option>
+              <option value="HRK">HRK</option>
+              <option value="PLN">PLN</option>
+              <option value="TRY">TRY</option>
+              <option value="INR">INR</option>
+              <option value="MYR">MYR</option>
+              <option value="ZAR">ZAR</option>
+              <option value="JPY">JPY</option>
+            </select>
+            <div class="display">
+              <input class="right cur" type="number" name="">
+              <p class="detailsR"></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <!-- <script src="script.js"></script> -->
+    <script src="script2.js"></script>
+  </body>
+</html>

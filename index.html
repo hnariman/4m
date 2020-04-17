@@ -5,63 +5,177 @@
     <title>Some Title for M4_1 project</title>
     <link rel="stylesheet" href="style.css" media="all">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css">
   </head>
   <body>
-    <header></header>
+    <div class="loader">
+      <div class="loaderMessage"></div>
+    </div>
+    <header>
+      <ul class="navbar">
+      <li><div class="logo"> <span class="bankName">bank</span> <i class="fas fa-comment-alt"></i></div></li>
+        <li class="nav-selected">БАНК</li>
+        <li>БИЗНЕС</li>
+        <li>ИНВЕСТИЦИИ</li>
+        <li>СТРАХОВАНИЕ</li>
+        <li>МОБАЙЛ</li>
+        <li>ПУТЕШЕСТВИЯ</li>
+        <li>РАЗВЛЕЧЕНИЯ</li>
+        <li><div class="login">ВОЙТИ</div></li>
+      </ul>
+    </header>
     <main>
       <section class="exchange">
-        <h1 class="title">Currency converter online</h1>
+        <h1 class="title">Конвертер валют онлайн</h1>
         <div class="containerMain">
-          <div class="left">
-            <input class="leftButton L" type="button" value="RUB">
-            <input class="leftButton M" type="button" value="USD">
-            <input class="leftButton M" type="button" value="EUR">
-            <input class="leftButton R" type="button" value="GBP">
-            <select class="rightSelect" value="1">
-              <option value="EUR">EUR</option>
-              <option value="RUB">RUB</option>
-              <option value="USD">USD</option>
-              <option value="AZN">AZN</option>
-              <option value="HKD">RUB</option>
-              <option value="INR">INR</option>
-              <option value="CHF">CHF</option>
-              <option value="JPY">JPY</option>
-              <option value="CAD">CAD</option>
-              <option value="CNY">CNY</option>
-            </select>
+          <div class="leftContainer">
+            <button class="left L" value="RUB">RUB</button>
+            <button class="left M" value="USD">USD</button>
+            <button class="left M" value="EUR">EUR</button>
+            <button class="left R" value="GBP">GBP</button>
+            <!-- <input class="left leftButton L" type="button" value="RUB"> -->
+            <!-- <input class="left leftButton M" type="button" value="USD"> -->
+            <!-- <input class="left leftButton M" type="button" value="EUR"> -->
+            <!-- <input class="left leftButton R" type="button" value="GBP"> -->
+            <div class="left customSelect">
+              <select class="left leftSelect" name="rightSelect"  value="1">
+                <option value="USD">USD</option>
+                <option value="EUR">EUR</option>
+                <option value="CHF">CHF</option>
+                <option value="NOK">NOK</option>
+                <option value="CAD">CAD</option>
+                <option value="RUB">RUB</option>
+                <option value="GBP">GBP</option>
+                <option value="MXN">MXN</option>
+                <option value="CNY">CNY</option>
+                <option value="ISK">ISK</option>
+                <option value="KRW">KRW</option>
+                <option value="HKD">HKD</option>
+                <option value="CZK">CZK</option>
+                <option value="BGN">BGN</option>
+                <option value="BRL">BRL</option>
+                <option value="IDR">IDR</option>
+                <option value="SGD">SGD</option>
+                <option value="PHP">PHP</option>
+                <option value="RON">RON</option>
+                <option value="HUF">HUF</option>
+                <option value="ILS">ILS</option>
+                <option value="THB">THB</option>
+                <option value="SEK">SEK</option>
+                <option value="NZD">NZD</option>
+                <option value="AUD">AUD</option>
+                <option value="DKK">DKK</option>
+                <option value="HRK">HRK</option>
+                <option value="PLN">PLN</option>
+                <option value="TRY">TRY</option>
+                <option value="INR">INR</option>
+                <option value="MYR">MYR</option>
+                <option value="ZAR">ZAR</option>
+                <option value="JPY">JPY</option>
+              </select>        
+            </div>
             <div class="display">
-              <input class="left cur"type="number" name="">
+              <input class="left cur" type="number" value="1">
               <p class="detailsL"></p>
             </div>
           </div>
           <div class="reverse">
             <span class="material-icons"> compare_arrows </span>
           </div>
-          <div class="right">
-            <input class="rightButton L"  type="button" value="RUB">
-            <input class="rightButton M"   type="button" value="USD">
-            <input class="rightButton M"   type="button" value="EUR">
-            <input class="rightButton R" type="button" value="GBP">
-            <select class="leftSelect" value="2">
-              <option value="RUB">RUB</option>
-              <option value="USD">USD</option>
-              <option value="AZN">AZN</option>
-              <option value="HKD">RUB</option>
-              <option value="INR">INR</option>
-              <option value="CHF">CHF</option>
-              <option value="JPY">JPY</option>
-              <option value="CAD">CAD</option>
-              <option value="CNY">CNY</option>
-            </select>
+          <div class="rightContainer">
+            <button class="right L" value="RUB">RUB</button>
+            <button class="right M" value="USD">USD</button>
+            <button class="right M" value="EUR">EUR</button>
+            <button class="right R" value="GBP">GBP</button>
+            <!-- <input class="right rightButton L"  type="button" value="RUB"> -->
+            <!-- <input class="right rightButton M"   type="button" value="USD"> -->
+            <!-- <input class="right rightButton M"   type="button" value="EUR"> -->
+            <!-- <input class="right rightButton R" type="button" value="GBP"> -->
+            <div class="right customSelect">
+              <select class="right rightSelect" name="leftSelect" value="1">
+                <option value="EUR">EUR</option>
+                <option value="CHF">CHF</option>
+                <option value="NOK">NOK</option>
+                <option value="CAD">CAD</option>
+                <option value="RUB">RUB</option>
+                <option value="GBP">GBP</option>
+                <option value="MXN">MXN</option>
+                <option value="CNY">CNY</option>
+                <option value="ISK">ISK</option>
+                <option value="KRW">KRW</option>
+                <option value="HKD">HKD</option>
+                <option value="CZK">CZK</option>
+                <option value="BGN">BGN</option>
+                <option value="BRL">BRL</option>
+                <option value="USD">USD</option>
+                <option value="IDR">IDR</option>
+                <option value="SGD">SGD</option>
+                <option value="PHP">PHP</option>
+                <option value="RON">RON</option>
+                <option value="HUF">HUF</option>
+                <option value="ILS">ILS</option>
+                <option value="THB">THB</option>
+                <option value="SEK">SEK</option>
+                <option value="NZD">NZD</option>
+                <option value="AUD">AUD</option>
+                <option value="DKK">DKK</option>
+                <option value="HRK">HRK</option>
+                <option value="PLN">PLN</option>
+                <option value="TRY">TRY</option>
+                <option value="INR">INR</option>
+                <option value="MYR">MYR</option>
+                <option value="ZAR">ZAR</option>
+                <option value="JPY">JPY</option>
+              </select>
+            </div>
             <div class="display">
-              <input class="right cur"type="number" name="">
+              <input class="right cur" type="number" name="">
               <p class="detailsR"></p>
             </div>
           </div>
         </div>
       </section>
     </main>
-    <footer></footer>
-    <script src="script.js"></script>
+    <footer>
+      <hr class="footerLine">
+     <div class="white">
+       <div class="number">
+         <div>Банк</div>
+       <div class="tel">8 800 666-43-07</div>
+       </div>
+         <ul class="bottomLinks">
+           <li>О банке</li>
+           <li>Новости</li>
+           <li>Работа</li>
+           <li>Точки пополнения</li>
+           <li>Банкоматы</li>
+           <li>Курсы валют</li>
+           <li>Контакты</li>
+           <li>Помощь</li>
+           <li>Безопасность</li>
+           <li>For investors</li>
+           <li class="comment">Для звонков по России</li>
+         </ul>
+     </div>
+   <div>
+   </div>
+   <hr>
+   <div class="text"> АО «Банк» использует файлы «cookie», с целью
+     персонализации сервисов и повышения удобства пользования веб-сайтом.
+     «Cookie» представляют собой небольшие файлы, содержащие информацию
+   о предыдущих посещениях веб-сайта. Если вы не хотите использовать файлы
+   «cookie», измените настройки браузера.  </div>
+   <hr>
+    <div class="bottom">
+     <div class="text"> © 2019—2020, АО «Банк», официальный сайт, лицензия ЦБ РФ № 8765 </div>
+     <div class="socials">
+       <i class="fab fa-2x fa-twitter"></i>
+       <i class="fab fa-2x fa-facebook-f"></i>
+       <i class="fab fa-2x fa-telegram-plane"></i>
+     </div>
+   </div>
+    </footer>
+    <!-- <script src="script.js"></script> -->
+    <script src="script2.js"></script>
   </body>
 </html>

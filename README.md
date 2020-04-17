@@ -38,12 +38,12 @@ DKK
 HRK
 PLN
 TRY
-
-
 INR
 MYR
 ZAR
 JPY
+
+
 
 
 
