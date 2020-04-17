@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
   <head>
     <meta charset="UTF-8">
     <title>Some Title for M4_1 project</title>
@@ -30,7 +30,7 @@
         <div class="containerMain">
           <div class="leftContainer">
               <div class="buttonBar">
-            <button class="left L" value="RUB">RUB</button>
+            <button class="left L selected" value="RUB">RUB</button>
             <button class="left M" value="USD">USD</button>
             <button class="left M" value="EUR">EUR</button>
             <button class="left M" value="GBP">GBP</button>
@@ -70,12 +70,8 @@
                 <option value="JPY">JPY</option>
               </select>        
               </div>
-            <!-- <input class="left leftButton L" type="button" value="RUB"> -->
-            <!-- <input class="left leftButton M" type="button" value="USD"> -->
-            <!-- <input class="left leftButton M" type="button" value="EUR"> -->
-            <!-- <input class="left leftButton R" type="button" value="GBP"> -->
             <div class="display">
-              <input class="left cur" type="number" value="1">
+              <input class="left cur" pattern="[0-9]" type="number" value="1" required>
               <p class="detailsL"></p>
             </div>
           </div>
@@ -85,7 +81,7 @@
           <div class="rightContainer">
               <div class="buttonBar">
             <button class="right L" value="RUB">RUB</button>
-            <button class="right M" value="USD">USD</button>
+            <button class="right M selected" value="USD">USD</button>
             <button class="right M" value="EUR">EUR</button>
             <button class="right M" value="GBP">GBP</button>
               <select class="right rightSelect" name="leftSelect" value="1">
@@ -124,12 +120,8 @@
                 <option value="JPY">JPY</option>
               </select>
               </div>
-            <!-- <input class="right rightButton L"  type="button" value="RUB"> -->
-            <!-- <input class="right rightButton M"   type="button" value="USD"> -->
-            <!-- <input class="right rightButton M"   type="button" value="EUR"> -->
-            <!-- <input class="right rightButton R" type="button" value="GBP"> -->
             <div class="display">
-              <input class="right cur" type="number" name="">
+              <input class="right cur" pattern="[0-9]" type="number" name="">
               <p class="detailsR"></p>
             </div>
           </div>

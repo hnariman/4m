@@ -1,3 +1,5 @@
+
+
 // парсим курс с сервиса
 async function getRate(from, to) {
   console.log('from ',from);
@@ -13,9 +15,9 @@ async function getRate(from, to) {
 }
 
 // конверторно-иверторный мега калькулятор
-async function converter (from, to, amount, direction) {
+async function converter (from='RUB', to='USD', amount=1, direction) {
   const rate = await getRate(from, to);
-  const result = amount * rate;
+  const result = (rate>0)? amount / rate : amount * rate;
   console.log(rate);
   console.log(amount);
   console.log(result);
@@ -35,7 +37,7 @@ const render = (result, direction, from, to, rate) => {
   } 
   else if (direction === 'right') {
     document.querySelector('.detailsL'  ).innerText = `1 ${to} = ${rate} ${from}`;
-    document.querySelector('.detailsR'  ).innerText = `1 ${from} = ${1/rate} ${to}`;
+    document.querySelector('.detailsR'  ).innerText = `1 ${from} = ${1/rate.toFixed(4)} ${to}`;
     document.querySelector('input.left').value = result.toFixed(2)
   }
 }
@@ -47,14 +49,23 @@ const buttonStyle = (direction, target) => {
   target.classList.add('selected');
 }
 
+function validate(data) {
+  console.log(data);
+  const pattern = /[^0-9]/
+  const newData = data.replace(pattern, '') ; 
+  console.log(newData);
+return newData;
+
+}
+
 // запрос-о-накопитель, распределитель, слушатель
 function handler(event, type) {
-  console.log(event.target);
+  // console.log(event.target);
   let from ='USD';
   let to = 'RUB';
   let amount = 1;
   const direction = (event.target.classList.contains('left')) ? 'left' : 'right';
-  if (event.target.tagName === 'INPUT')  { amount = event.target.value; }
+  if (event.target.tagName === 'INPUT')  { amount = event.target.value; validate(event.target.value); }
   if (event.target.tagName === 'SELECT') { from   = event.target.options[event.target.selectedIndex].value; }
   if (event.target.tagName === 'BUTTON') { from   = event.target.value; buttonStyle(direction, event.target); }
 
@@ -72,13 +83,21 @@ function loadingStart() {
 function loadingEnd() { document.querySelector('.loader').style.display = 'none'; }
 
 const reverse = () => {
-  const valueL = leftInput.value;
-  const valueR = rightInput.value;
-  leftInput.value = valueR;
-  rightInput.value = valueL;
+  const valueL = document.querySelector('input.left').value;
+  const valueR = document.querySelector('input.right').value;
+  // const buttonR = document.querySelector('.left');
+  // const buttonL = document.querySelector('input.right');
+  console.log(document.querySelector('button.left ').value);
+
+  // target.classList.add('selected');
+  document.querySelector('input.left').value = valueR;
+  document.querySelector('input.right').value = valueL;
 }
 
 document.querySelectorAll('button').forEach( x => x.addEventListener('click', handler));
 document.querySelectorAll('select').forEach( x => x.addEventListener('change', handler));
 document.querySelectorAll('input.cur').forEach( x => x.addEventListener('input', handler));
 document.querySelector('.reverse').addEventListener('click', reverse);
+
+
+document.querySelector('input.right').value = converter('RUB','USD',1,'left')
